@@ -1,0 +1,16 @@
+{
+  "name": "aptifyx-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AptiFyx On-Demand Local Services Marketplace",
+  "workspaces": [
+    "backend",
+    "frontend",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run start -w frontend",
+    "build:shared": "npm run build -w @aptifyx/shared-types"
+  }
+}
