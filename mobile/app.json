@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "AptiFyx",
+    "slug": "aptifyx",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4F46E5"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.aptifyx.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "AptiFyx needs your location to find nearby service providers.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "AptiFyx needs your location to track job progress.",
+        "NSMicrophoneUsageDescription": "AptiFyx needs microphone for in-app calls."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#4F46E5"
+      },
+      "package": "com.aptifyx.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "AptiFyx needs location to match you with nearby service providers."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#4F46E5"
+        }
+      ]
+    ],
+    "extra": {
+      "API_BASE_URL": "http://192.168.1.100:3000"
+    }
+  }
+}
